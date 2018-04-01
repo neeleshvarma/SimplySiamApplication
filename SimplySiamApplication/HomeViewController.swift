@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
         
         let placemark = MKPlacemark(coordinate: coordinates)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "My House"
+        mapItem.name = "Simply Siam"
         mapItem.openInMaps(launchOptions: options)
     }
     
