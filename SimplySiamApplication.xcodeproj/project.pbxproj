@@ -26,6 +26,7 @@
 		3FCE40CE2022DAEE00D18843 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE40CD2022DAEE00D18843 /* CartTableViewCell.swift */; };
 		3FE214C22026722F002E9B6A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE214C12026722F002E9B6A /* DatabaseManager.swift */; };
 		92848F9EC8374C6745B54EBA /* Pods_SimplySiamApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789787F4897FFA96F24B4FB9 /* Pods_SimplySiamApplication.framework */; };
+		DFF961902063FCC7004F15C6 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF9618F2063FCC7004F15C6 /* MapsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		3FCE40CD2022DAEE00D18843 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		3FE214C12026722F002E9B6A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		789787F4897FFA96F24B4FB9 /* Pods_SimplySiamApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplySiamApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF9618F2063FCC7004F15C6 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		3FCE40A62022B01100D18843 /* SimplySiamApplication */ = {
 			isa = PBXGroup;
 			children = (
+				DFF9618F2063FCC7004F15C6 /* MapsViewController.swift */,
 				3FCE40A72022B01100D18843 /* AppDelegate.swift */,
 				3FCE40C32022CB8B00D18843 /* LoginViewController.swift */,
 				3FCE40C52022CBB000D18843 /* SignUpViewController.swift */,
@@ -256,6 +259,7 @@
 				3FCE40C42022CB8B00D18843 /* LoginViewController.swift in Sources */,
 				3FCE40BC2022B23100D18843 /* MenuTableViewController.swift in Sources */,
 				3FCE40CC2022CEA000D18843 /* CartTableViewController.swift in Sources */,
+				DFF961902063FCC7004F15C6 /* MapsViewController.swift in Sources */,
 				3F6A50E0202F9AC700ED0E26 /* ProfileViewController.swift in Sources */,
 				3FCE40C62022CBB000D18843 /* SignUpViewController.swift in Sources */,
 				3F6A50E2202F9AF200ED0E26 /* HomeViewController.swift in Sources */,

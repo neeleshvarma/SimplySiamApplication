@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class HomeViewController: UIViewController {
 
@@ -23,6 +24,22 @@ class HomeViewController: UIViewController {
         let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! UIViewController
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = loginVC
+    }
+    
+    @IBAction func getDirections(_ sender: Any) {
+        let latitude: CLLocationDegrees = 40.3484
+        let longitude: CLLocationDegrees = -94.8730
+        
+        let regionDistance: CLLocationDistance = 1000;
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "My House"
+        mapItem.openInMaps(launchOptions: options)
     }
     
     override func viewDidLoad() {
