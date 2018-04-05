@@ -26,6 +26,7 @@
 		3FCE40CE2022DAEE00D18843 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE40CD2022DAEE00D18843 /* CartTableViewCell.swift */; };
 		3FE214C22026722F002E9B6A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE214C12026722F002E9B6A /* DatabaseManager.swift */; };
 		92848F9EC8374C6745B54EBA /* Pods_SimplySiamApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789787F4897FFA96F24B4FB9 /* Pods_SimplySiamApplication.framework */; };
+		DFDCFBF42075B95B00FACCDA /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDCFBF32075B95B00FACCDA /* FeedbackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		3FCE40CD2022DAEE00D18843 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		3FE214C12026722F002E9B6A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		789787F4897FFA96F24B4FB9 /* Pods_SimplySiamApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplySiamApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFDCFBF32075B95B00FACCDA /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				3F6A50DD202EF3B800ED0E26 /* CartViewController.swift */,
 				3FCE40CB2022CEA000D18843 /* CartTableViewController.swift */,
 				3FCE40CD2022DAEE00D18843 /* CartTableViewCell.swift */,
+				DFDCFBF32075B95B00FACCDA /* FeedbackViewController.swift */,
 				3FCE40C72022CBD000D18843 /* CheckoutViewController.swift */,
 				3F6A50DF202F9AC700ED0E26 /* ProfileViewController.swift */,
 				3F6A50E1202F9AF200ED0E26 /* HomeViewController.swift */,
@@ -264,6 +267,7 @@
 				3F6A50DE202EF3B800ED0E26 /* CartViewController.swift in Sources */,
 				3FCE40BE2022B2CB00D18843 /* Data.swift in Sources */,
 				3FCE40C02022B7B000D18843 /* ItemDetailsViewController.swift in Sources */,
+				DFDCFBF42075B95B00FACCDA /* FeedbackViewController.swift in Sources */,
 				3FE214C22026722F002E9B6A /* DatabaseManager.swift in Sources */,
 				3FCE40C22022BA1500D18843 /* MenuItemTableViewCell.swift in Sources */,
 				3FCE40C82022CBD000D18843 /* CheckoutViewController.swift in Sources */,
@@ -406,12 +410,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WD7799T5WN;
+				DEVELOPMENT_TEAM = 4C64W48T4Y;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SimplySiamApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--";
+				PRODUCT_BUNDLE_IDENTIFIER = SimplySiam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -425,12 +429,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WD7799T5WN;
+				DEVELOPMENT_TEAM = 4C64W48T4Y;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SimplySiamApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--";
+				PRODUCT_BUNDLE_IDENTIFIER = SimplySiam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

@@ -12,7 +12,7 @@ class CartTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Cart"
+        self.navigationItem.title = "Cart"       
     }
     
     override func viewWillAppear(_ animated: Bool) {
