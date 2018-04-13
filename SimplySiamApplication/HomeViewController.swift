@@ -9,8 +9,20 @@
 import UIKit
 import MapKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
 
+    @IBAction func NumberOfGuests(_ sender: UIStepper) {
+        let number:Int = Int(sender.value)
+        totalGuestsNumber.text = "\(number)"
+    }
+    @IBOutlet weak var stepperOutlet: UIStepper!
+    @IBOutlet weak var totalGuestsNumber: UILabel!
+    @IBOutlet weak var totalGuestsLBL: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var eventTypePicker: UIPickerView! = UIPickerView()
+    
+    var pickerList = ["Dine In", "Take Away","Delivery"]
+    
     @IBAction func Logout(_ sender: Any) {
         loggedUserName = ""
         loggedUserEmail = ""
@@ -45,6 +57,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
+        datePicker.isHidden = true
+        totalGuestsLBL.isHidden = true
+        totalGuestsNumber.isHidden = true
+        stepperOutlet.isHidden = true
+        eventTypePicker.delegate = self
+        eventTypePicker.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -53,15 +71,49 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
-
+    
+    // returns the number of 'columns' to display.
+    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
+        return 1
+    }
+    
+    // returns the # of rows in each component..
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        return pickerList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int
+        ) -> String? {
+        return pickerList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if pickerList[eventTypePicker.selectedRow(inComponent: 0)] == "Delivery" {
+            datePicker.isHidden = false
+            totalGuestsLBL.isHidden = true
+            totalGuestsNumber.isHidden = true
+            stepperOutlet.isHidden = true
+        }else if pickerList[eventTypePicker.selectedRow(inComponent: 0)] == "Take Away" {
+            datePicker.isHidden = false
+            totalGuestsLBL.isHidden = true
+            totalGuestsNumber.isHidden = true
+            stepperOutlet.isHidden = true
+        }else if pickerList[eventTypePicker.selectedRow(inComponent: 0)] == "Dine In" {
+            datePicker.isHidden = false
+            totalGuestsLBL.isHidden = false
+            totalGuestsNumber.isHidden = false
+            stepperOutlet.isHidden = false
+        }else{
+            datePicker.isHidden = true
+            totalGuestsLBL.isHidden = true
+            totalGuestsNumber.isHidden = true
+            stepperOutlet.isHidden = true
+        }
+    }
 }
