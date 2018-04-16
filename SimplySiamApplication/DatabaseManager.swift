@@ -55,7 +55,7 @@ class DatabaseManager {
         return flag
     }
     
-    func registerUser(name:String,email:String,passs:String,phone:String,address:String,city:String,state:String,zip:String)->Bool {
+    func registerUser(name:String, email:String, passs:String, phone:String, address:String, city:String, state:String, zip:String)->Bool {
         var flag:Bool = false
         Types.tryblock({() -> Void in
             var user = BackendlessUser()
@@ -112,15 +112,18 @@ class DatabaseManager {
         return flag
     }
     
-    func resetPassword(username:String?) -> Void {
+    func resetPassword(username:String?) -> Bool {
+        var flag:Bool = false
         backendless.userService.restorePassword(username,
             response: {
             (result : Any) -> Void in
             print("Please check your email inbox to reset your password")
+            flag = true
         },
             error: {
             (fault : Fault?) -> Void in
             print("Server reported an error: \(fault?.description)")
         })
+        return flag
     }
 }

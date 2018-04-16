@@ -24,13 +24,12 @@
 		3FCE40C82022CBD000D18843 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE40C72022CBD000D18843 /* CheckoutViewController.swift */; };
 		3FCE40CC2022CEA000D18843 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE40CB2022CEA000D18843 /* CartTableViewController.swift */; };
 		3FCE40CE2022DAEE00D18843 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE40CD2022DAEE00D18843 /* CartTableViewCell.swift */; };
+		3FCFC7CEB124C682E3275839 /* Pods_SimplySiamApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F107B5C91F26793DB6AAD2 /* Pods_SimplySiamApplication.framework */; };
 		3FE214C22026722F002E9B6A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE214C12026722F002E9B6A /* DatabaseManager.swift */; };
-		92848F9EC8374C6745B54EBA /* Pods_SimplySiamApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789787F4897FFA96F24B4FB9 /* Pods_SimplySiamApplication.framework */; };
+		DFDCFBF42075B95B00FACCDA /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDCFBF32075B95B00FACCDA /* FeedbackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A0EB537FBF943CFD4DCE99D /* Pods-SimplySiamApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplySiamApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimplySiamApplication/Pods-SimplySiamApplication.debug.xcconfig"; sourceTree = "<group>"; };
-		2DD2C143BD911B94766501FC /* Pods-SimplySiamApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplySiamApplication.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimplySiamApplication/Pods-SimplySiamApplication.release.xcconfig"; sourceTree = "<group>"; };
 		3F6A50DD202EF3B800ED0E26 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		3F6A50DF202F9AC700ED0E26 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3F6A50E1202F9AF200ED0E26 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +50,10 @@
 		3FCE40CB2022CEA000D18843 /* CartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
 		3FCE40CD2022DAEE00D18843 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		3FE214C12026722F002E9B6A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		789787F4897FFA96F24B4FB9 /* Pods_SimplySiamApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplySiamApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65F107B5C91F26793DB6AAD2 /* Pods_SimplySiamApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplySiamApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6678B9D3428D8A5FC92C760 /* Pods-SimplySiamApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplySiamApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimplySiamApplication/Pods-SimplySiamApplication.debug.xcconfig"; sourceTree = "<group>"; };
+		D24559B3C71D2129F9B360E6 /* Pods-SimplySiamApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplySiamApplication.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimplySiamApplication/Pods-SimplySiamApplication.release.xcconfig"; sourceTree = "<group>"; };
+		DFDCFBF32075B95B00FACCDA /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,19 +61,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92848F9EC8374C6745B54EBA /* Pods_SimplySiamApplication.framework in Frameworks */,
+				3FCFC7CEB124C682E3275839 /* Pods_SimplySiamApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		174A4158C5D841C3B150C8B9 /* Frameworks */ = {
+		30E8CA3D2555D98723996D86 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				789787F4897FFA96F24B4FB9 /* Pods_SimplySiamApplication.framework */,
+				C6678B9D3428D8A5FC92C760 /* Pods-SimplySiamApplication.debug.xcconfig */,
+				D24559B3C71D2129F9B360E6 /* Pods-SimplySiamApplication.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		3FCE409B2022B01100D18843 = {
@@ -79,8 +82,8 @@
 			children = (
 				3FCE40A62022B01100D18843 /* SimplySiamApplication */,
 				3FCE40A52022B01100D18843 /* Products */,
-				68AEE2705F5C06188B4FDA35 /* Pods */,
-				174A4158C5D841C3B150C8B9 /* Frameworks */,
+				30E8CA3D2555D98723996D86 /* Pods */,
+				B8EC2D3C9786C720F76F6395 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +107,7 @@
 				3F6A50DD202EF3B800ED0E26 /* CartViewController.swift */,
 				3FCE40CB2022CEA000D18843 /* CartTableViewController.swift */,
 				3FCE40CD2022DAEE00D18843 /* CartTableViewCell.swift */,
+				DFDCFBF32075B95B00FACCDA /* FeedbackViewController.swift */,
 				3FCE40C72022CBD000D18843 /* CheckoutViewController.swift */,
 				3F6A50DF202F9AC700ED0E26 /* ProfileViewController.swift */,
 				3F6A50E1202F9AF200ED0E26 /* HomeViewController.swift */,
@@ -118,13 +122,12 @@
 			path = SimplySiamApplication;
 			sourceTree = "<group>";
 		};
-		68AEE2705F5C06188B4FDA35 /* Pods */ = {
+		B8EC2D3C9786C720F76F6395 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A0EB537FBF943CFD4DCE99D /* Pods-SimplySiamApplication.debug.xcconfig */,
-				2DD2C143BD911B94766501FC /* Pods-SimplySiamApplication.release.xcconfig */,
+				65F107B5C91F26793DB6AAD2 /* Pods_SimplySiamApplication.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,12 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FCE40B82022B01100D18843 /* Build configuration list for PBXNativeTarget "SimplySiamApplication" */;
 			buildPhases = (
-				8A299A856322C6BEE903001C /* [CP] Check Pods Manifest.lock */,
+				C439EE8619ECE594528B7832 /* [CP] Check Pods Manifest.lock */,
 				3FCE40A02022B01100D18843 /* Sources */,
 				3FCE40A12022B01100D18843 /* Frameworks */,
 				3FCE40A22022B01100D18843 /* Resources */,
-				6EA8B0D68E211A7B9B9EE84B /* [CP] Embed Pods Frameworks */,
-				A7E758CFFD6B825D99385524 /* [CP] Copy Pods Resources */,
+				AA479A870E0090716C0EAA88 /* [CP] Embed Pods Frameworks */,
+				6A7FB4A24F1193F9C0B44774 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,7 +201,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6EA8B0D68E211A7B9B9EE84B /* [CP] Embed Pods Frameworks */ = {
+		6A7FB4A24F1193F9C0B44774 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimplySiamApplication/Pods-SimplySiamApplication-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA479A870E0090716C0EAA88 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,7 +231,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimplySiamApplication/Pods-SimplySiamApplication-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A299A856322C6BEE903001C /* [CP] Check Pods Manifest.lock */ = {
+		C439EE8619ECE594528B7832 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,21 +247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A7E758CFFD6B825D99385524 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimplySiamApplication/Pods-SimplySiamApplication-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -264,6 +267,7 @@
 				3F6A50DE202EF3B800ED0E26 /* CartViewController.swift in Sources */,
 				3FCE40BE2022B2CB00D18843 /* Data.swift in Sources */,
 				3FCE40C02022B7B000D18843 /* ItemDetailsViewController.swift in Sources */,
+				DFDCFBF42075B95B00FACCDA /* FeedbackViewController.swift in Sources */,
 				3FE214C22026722F002E9B6A /* DatabaseManager.swift in Sources */,
 				3FCE40C22022BA1500D18843 /* MenuItemTableViewCell.swift in Sources */,
 				3FCE40C82022CBD000D18843 /* CheckoutViewController.swift in Sources */,
@@ -402,7 +406,7 @@
 		};
 		3FCE40B92022B01100D18843 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A0EB537FBF943CFD4DCE99D /* Pods-SimplySiamApplication.debug.xcconfig */;
+			baseConfigurationReference = C6678B9D3428D8A5FC92C760 /* Pods-SimplySiamApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -411,7 +415,7 @@
 				INFOPLIST_FILE = SimplySiamApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nwmsu.SimplySiamApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = SimplySiam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -421,7 +425,7 @@
 		};
 		3FCE40BA2022B01100D18843 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DD2C143BD911B94766501FC /* Pods-SimplySiamApplication.release.xcconfig */;
+			baseConfigurationReference = D24559B3C71D2129F9B360E6 /* Pods-SimplySiamApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,7 +434,7 @@
 				INFOPLIST_FILE = SimplySiamApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nwmsu.SimplySiamApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = SimplySiam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

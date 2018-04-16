@@ -38,12 +38,38 @@ class CheckoutViewController: UIViewController {
     
     @IBAction func ConfirmOrder(_ sender: Any) {
         var status:Bool = false
+        var sum:Double = 0.0
+        for i in CartItems{
+            sum = sum + (i.price * i.quantity)
+        }
+        var items:String = "<br /><table style='border=1px solid;'><tr><th>Name</th><th>Price x Quantity</th><th>Item Total</th></tr>"
+        for i in CartItems{
+            items = items + "<tr style='height:40px; width:450px; margin:0;'><td style='border=1px solid;'>\(i.name)</td><td style='border=1px solid;'> \(i.price) x \(i.quantity)  </td><td style='border=1px solid;'>$ \(i.price*i.quantity)</td></tr>"
+        }
+        
+        items = items + "<tr><td><b>Total Price: </b></td><td>\(sum)</td></tr><br /><br />"
+        let bodyContent:String = """
+<h3>Order Confirmation</h3><br />
+        <b>Please find the order details below: </b><br/>
+        \(items)
+        <h3> No more Waiting </h3><br />
+        <b>Thanks</b>
+        <p>Simply Siam</p>
+"""
+        print(bodyContent)
         let alert = UIAlertController(title: "Proceeding to Checkout  Simply Siam", message: "Do you want to confirm your order?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-            if databaseManager.sendEmail(subject: "Simply Siam - Order Confirmation", body: "This is from simply siam order confirmation.", recipient: self.email.text!){
-            print("Order Confirmed")
+            if databaseManager.sendEmail(subject: "Simply Siam - Order Confirmation", body: bodyContent, recipient: self.email.text!){
+                let alertController = UIAlertController(title: "Simply Siam", message:
+                    "Order Placed successfully..!!!", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                
             }else{
-                print("Order Confirmed")
+                let alertController = UIAlertController(title: "Simply Siam", message:
+                    "Error Placing the order. Please try later..!!!", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
             }
         }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
@@ -51,6 +77,7 @@ class CheckoutViewController: UIViewController {
     }
     
     @IBAction func BackToHome(_ sender: Any) {
+        
     }
    
 

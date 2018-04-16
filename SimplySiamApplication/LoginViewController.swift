@@ -14,6 +14,27 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginImage: UIImageView!
     
+    @IBAction func ForgotPassword(_ sender: Any) {
+        print("forgot password")
+        let alert = UIAlertController(title: "Simply Siam Password Recovery", message: "Mail will be sent to \(self.username.text!) with steps to recover password?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            if databaseManager.resetPassword(username: self.username.text!){
+                let alertController = UIAlertController(title: "Simply Siam", message:
+                    "Reset password mail sent successfully..!!!", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }else{
+                let alertController = UIAlertController(title: "Simply Siam", message:
+                    "Reset password mail sent successfully..!!!", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+        
+    }
+    
     @IBAction func LoginUserBtn(_ sender: Any) {
         var status:Bool = databaseManager.loginUser(username: username.text!, password: password.text!)
         if status == true && isUserLoggedIn == true{
@@ -30,6 +51,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func ContinueAsGuest(_ sender: Any) {
+        print("guest")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let menuItemTabbarVC = storyboard.instantiateViewController(withIdentifier: "menuItemTabbarVC") as! UITabBarController
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

@@ -27,7 +27,17 @@ class ProfileViewController: UIViewController {
         var status:Bool = false
         let alert = UIAlertController(title: "Password Recovery", message: "You will get a link to registered mail to reset your password. Do you want to continue?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-            databaseManager.resetPassword(username: loggedUserEmail)
+            if databaseManager.resetPassword(username: loggedUserEmail){
+                let alertController = UIAlertController(title: "Simply Siam", message:
+                    "Password reset mail sent successfully..!!!", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            } else{
+                let alertController = UIAlertController(title: "Simply Siam", message:
+                    "Error. Please try again..!!!", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
         }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(alert, animated: true)
